@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container {
+            display: flex;
+        }
+
+        .flex-container > div {
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .form-left {
+            text-align: right;
+        }
+
+        .form-right {
+            text-align: left;
+        }
+
+        .hobbies-container {
+            display: flex;
+        }
+
+        .hobbies-container > div {
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px; 
+        }
+
+        .hobbies1{
+            text-align: left;
+            flex-direction: column;
+        }
+
+        .hobbies2{
+            text-align: left;
+            flex-direction: column;
+        }
+
+        .hobbies3{
+            text-align: left;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body style="background-color: #C0F6FD;">
+    <form method="post" action="bai6_buoi3.html">
+        <h3 style="color: white; background-color: red; text-align: center;"> SỞ THÍCH CỦA BẠN </h3>
+        <div class="flex-container">
+            <div class="form-left">
+                <span style="color: blue">Họ và tên</span>
+                <br> <br>
+                <span style="color: blue">Email</span>
+                <br> <br>
+                <span style="color: blue">Sở thích</span>
+            </div>
+            <div class="form-right">
+                <input type="text" name="name" size="40"/>
+                <br> <br> 
+                <input type="text" name="mail" size="25"/>
+                <br>
+                <div class="hobbies-container">
+                    <div class="hobbies1">
+                        <input type="checkbox" id="hobby1" name="hobby1" value="Thể thao">
+                            <span style="color: orange">Thể thao</span>
+                        <br>
+                        <input type="checkbox" id="hobby4" name="hobby4" value="Lướt web">
+                            <span style="color: orange">Lướt web</span>
+                        <br>
+                        <input type="checkbox" id="hobby7" name="hobby7" value="Du lịch">
+                            <span style="color: orange">Du lịch</span>
+                    </div>
+                    <div class="hobbies2">
+                        <input type="checkbox" id="hobby2" name="hobby2" value="Âm nhạc">
+                            <span style="color: orange">Âm nhạc</span>
+                        <br>
+                        <input type="checkbox" id="hobby5" name="hobby5" value="Chơi game">
+                            <span style="color: orange">Chơi game</span>
+                    </div>
+                    <div class="hobbies3">
+                        <input type="checkbox" id="hobby3" name="hobby3" value="Đọc sách">
+                            <span style="color: orange">Đọc sách</span>
+                        <br>
+                        <input type="checkbox" id="hobby6" name="hobby6" value="Điện ảnh">
+                            <span style="color: orange">Điện ảnh</span>
+                    </div>
+                </div>
+                <input type="submit" name="btSubmit" value="Gửi thông tin"/>
+                <input type="reset" name="btReset" value="Nhập lại"/>   
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container {
+            display: flex;
+        }
+
+        .flex-container > div {
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .form-left {
+            text-align: left;
+        }
+
+        .form-right {
+            text-align: left;
+        }
+
+        .address{
+            padding: 30px;
+        }
+    </style>
+</head>
+<body style="background-color: #FDFAC0;">
+    <form method="post" action="bai6_buoi3.html">
+        <h3 style="color: blue; background-color: lightgreen; text-align: left;"> SỞ THÍCH CỦA BẠN </h3>
+        <div class="flex-container">
+            <div class="form-left">
+                <span style="color: blue">Họ và tên</span>
+                <br> <br>
+                <span style="color: blue">Ngày sinh</span>
+                <br> <br>
+                <span style="color: blue">Giới tính</span>
+                <br> <br>
+                <span style="color: blue">Địa chỉ</span>
+                <br> <br> <br> <br> <br>
+                <span style="color: blue">Lớp</span>
+                <br> <br>
+                <span style="color: blue">Email</span>
+                <br> <br>
+                <span style="color: blue">Điện thoại</span>
+            </div>
+            <div class="form-right">
+                <input type="text" name="name" size="40"/>
+                <br> <br> 
+                <input type="text" name="birthday" size="15"/>
+                <br> <br>
+                <input type="radio" id="nam" name="gioitinh" value="nam">
+                <label for="nam">Nam</label>
+                <input type="radio" id="nu" name="gioitinh" value="nu"> 
+                <label for="nu">Nữ</label>
+                <br> <br>
+                <input class="address" type="text" name="address" size="25"/>
+                <br> <br>
+                <select id="lop" name="lop">
+                    <option>--Chọn lớp--</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <br> <br>
+                <input type="text" name="mail" size="25"/>
+                <br> <br>
+                <input type="text" name="phone" size="25"/>
+                <br> <br>
+                <input type="submit" name="btSubmit" value="Đăng ký"/>
+                <input type="reset" name="btReset" value="Nhập lại"/>   
+            </div>
+        </div>
+    </form>
+</body>
+</html>
