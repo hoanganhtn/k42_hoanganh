@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="age" type="text" placeholder="nhập tuổi"/>
+    <button onclick="isAge()">Kiểm tra</button>
+    <p id="result"></p>
+
+    <script>
+        function isAge () {
+            let age = parseInt(document.getElementById("age").value);
+            if (!(Number.isInteger(age))) {
+                document.getElementById("result").textContent = "Nhập lại số tuổi";
+            }
+            else{
+                if (0 < age && age < 120) {
+                    document.getElementById("result").textContent = "Là tuổi của một người";
+                }
+                else {
+                    document.getElementById("result").textContent = "Không là tuổi của một người";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="toan" type="text" placeholder="Toán"/>
+    <input id="ly" type="text" placeholder="Lý"/>
+    <input id="hoa" type="text" placeholder="Hóa"/>
+    <button onclick="sum()">Điểm trung bình</button>
+    <p id="result"></p>
+
+    <script>
+        const sum = () => {
+            let toan = parseInt(document.getElementById("toan").value);
+            let ly = parseInt(document.getElementById("ly").value);
+            let hoa = parseInt(document.getElementById("hoa").value);
+            let trungbinh= + (toan + ly + hoa)/3;
+            document.getElementById("result").textContent = "Điểm trung bình của 3 môn: " + trungbinh;
+        }
+    </script>
+</body>
+</html>
+

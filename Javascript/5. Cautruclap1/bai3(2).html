@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="num" type="text" placeholder="Nhập số"/>
+    <button onclick="tinhtong()">Tính tổng</button>
+    <p id="result"></p>
+
+    <script>
+        function tinhtong () {
+            let num = parseInt (document.getElementById("num").value);
+            let tong = 0
+            let i = 1;
+            for (; i <= num; i++) {
+                tong = tong + i
+            }
+            document.getElementById('result').textContent =
+            "Tổng là " + tong
+        }
+    </script>
+</body>
+</html>

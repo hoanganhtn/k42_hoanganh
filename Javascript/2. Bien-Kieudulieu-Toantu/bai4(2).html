@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="doC" type="text" placeholder="Độ C"/>
+    <button onclick="doidoF()">Chuyển đổi</button>
+    <p id="change"></p>
+    
+
+    <script>
+        const doidoF = () => {
+        let doC = parseInt(document.getElementById("doC").value);
+        let doF = (doC * (9/5))+32;
+        document.getElementById("change").textContent = "Độ F là " + doF;
+    }
+    </script>
+</body>
+</html>

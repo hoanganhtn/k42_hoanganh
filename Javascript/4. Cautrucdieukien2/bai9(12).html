@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="money" type="text" placeholder="Số tiền ban đầu"/>
+    <input id="month" type="text" placeholder="Số tháng"/>
+    <input id="lai" type="text" placeholder="Lãi suất hàng tháng"/>
+    <button onclick="tinhlai()">Tính lãi</button>
+    <p id="result"></p>
+
+    <script>
+        function tinhlai () {
+            let money= parseInt(document.getElementById('money').value);
+            let month = parseInt(document.getElementById("month").value);
+            let lai = parseInt(document.getElementById("lai").value)/100;
+
+            let totalAmount = money;
+            let tonglai = 0;
+            for (let i = 0; i < month; i++) {
+                let interest = totalAmount * lai;
+                tonglai += interest;
+                totalAmount += interest;
+            }
+
+            document.getElementById("result").textContent = 
+                "Tổng số tiền được nhận là "+ totalAmount.toFixed(0) + " và tổng tiền lãi là " + tonglai.toFixed(0);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .head {
+            display: flex;
+            margin: 0 10px;
+            align-items: center;
+        }
+
+        .amount, .from, .to {
+            margin: 0 10px;
+            width: 50%;
+        }
+
+        .convert {
+
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <!-- lớp amount -->
+        <div class="amount">
+            <b>Amount</b>
+            <br> 
+            <input id="sotien" type="text"/>
+        </div> 
+        <!-- lớp tiền đang có -->
+        <div class="from">
+            <b>From Curency</b>
+            <br>
+            <select style="width: 40%;" id="fromcurrency" name="fromcurrency">
+                <option value="vietnam">VND</option>
+                <option value="my">USD</option>
+                <option value="nhat">Yên</option>
+            </select>
+        </div>
+        <!-- lớp tiền muốn chuyển sang -->
+        <div class="to">
+            <b>To Curency</b>
+            <br>
+            <select style="width: 40%;" id="fromcurrency" name="fromcurrency">
+                <option value="vietnam">VND</option>
+                <option value="my">USD</option>
+                <option value="nhat">Yên</option>
+            </select>
+        </div>
+        <!-- nút chuyển đổi -->
+        <div>
+            <button class="convert">Convert</button>
+        </div>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+</html>

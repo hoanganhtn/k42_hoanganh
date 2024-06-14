@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="num" type="text" placeholder="Nhập số"/>
+    <button onclick="kiemtra()">Kiểm tra</button>
+    <p id="result"></p>
+    <script>
+        function kiemtra () {
+            let num = parseInt(document.getElementById("num").value);
+            if (num > 0) {
+                result = "lớn hơn 0"
+            }
+            else {
+                result = "nhỏ hơn 0"
+            }
+            document.getElementById("result").textContent = num + " " + result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="year" type="text" placeholder="Nhập năm kiểm tra vô đây"/>
+    <button onclick="check()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        const check = () => {
+            let year = parseInt(document.getElementById("year").value);
+            if (year % 4 == 0) {
+                if (year % 100 == 0) {
+                    if (year % 400 == 0) {
+                        document.getElementById("result").textContent = year + " là năm nhuận"
+                    }
+                    else {
+                        document.getElementById("result").textContent = year + " không là năm nhuận"
+                    }
+                }
+                else {
+                    document.getElementById("result").textContent = year + " là năm nhuận"
+                }
+            }
+            else {
+                document.getElementById("result").textContent = year + " không là năm nhuận"
+            }   
+        }
+    </script>
+        
+</body>
+</html>

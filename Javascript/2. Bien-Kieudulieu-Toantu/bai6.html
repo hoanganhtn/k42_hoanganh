@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nut {
+            display: flex;
+        }
+
+        .tong, .hieu, .tich, .thuong{
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Caculator</h1>
+    <input id="giatri1" type="text" placeholder="a"/>
+    <input id="giatri2" type="text" placeholder="b"/>
+    <br> <br>
+    <div class="nut">
+        <div class="tong">
+            <button onclick="addition()">Addition(+)</button>
+            <p id="result1"></p>
+        </div>
+        <div class="hieu">
+            <button onclick="subtraction()">Subtraction(-)</button>
+            <p id="result2"></p>
+        </div>
+        <div class="tich">
+            <button onclick="multiplication()">Multiplication(x)</button>
+            <p id="result3"></p>
+        </div>
+        <div class="thuong">
+            <button onclick="devision()">Devision(/)</button>
+            <p id="result4"></p>
+        </div>
+    </div>
+
+    <script>
+        const addition = () => {
+        let giatri1 = parseInt(document.getElementById("giatri1").value);
+        let giatri2 = parseInt(document.getElementById("giatri2").value);
+        let tinhtong = giatri1 + giatri2;
+        document.getElementById("result1").textContent = "Kết quả là " + tinhtong;
+    }
+        const subtraction = () => {
+        let giatri1 = parseInt(document.getElementById("giatri1").value);
+        let giatri2 = parseInt(document.getElementById("giatri2").value);
+        let tinhhieu = giatri1 - giatri2;
+        document.getElementById("result2").textContent = "Kết quả là " + tinhhieu;
+    }
+        const multiplication = () => {
+        let giatri1 = parseInt(document.getElementById("giatri1").value);
+        let giatri2 = parseInt(document.getElementById("giatri2").value);
+        let tinhtich = giatri1 * giatri2;
+        document.getElementById("result3").textContent = "Kết quả là " + tinhtich;
+    }
+        const devision = () => {
+        let giatri1 = parseInt(document.getElementById("giatri1").value);
+        let giatri2 = parseInt(document.getElementById("giatri2").value);
+        let tinhthuong = giatri1 / giatri2;
+        document.getElementById("result4").textContent = "Kết quả là " + tinhthuong;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="kwh" type="text" placeholder="số KWh đã dùng"/>
+    <button onclick="tinhtiendien()">Tính giá điện</button>
+    <p id="result"></p>
+
+    <script>
+        function tinhtiendien() {
+            let price1 = 1678;
+            let price2 = 1734; 
+            let price3 = 2014; 
+            let price4 = 2536; 
+            let price5 = 2834;
+            let kwh = parseInt(document.getElementById("kwh").value); 
+            
+            if (kwh <= 50) {
+                document.getElementById("result").textContent = 
+                "Tổng số tiền điện phải trả là: " + (kwh*price1) + " VND";
+            }
+            else if (kwh<= 100) {
+                document.getElementById("result").textContent = 
+                "Tổng số tiền điện phải trả là: " + ((50*price1)+((kwh-50)*price2)) + " VND";
+            }
+            else if (kwh<= 200) {
+                document.getElementById("result").textContent = 
+                "Tổng số tiền điện phải trả là: " + ((50*price1)+(50*price2)+((kwh-100)*price3)) + " VND";
+            }
+            else if (kwh<= 300) {
+                document.getElementById("result").textContent = 
+                "Tổng số tiền điện phải trả là: " + ((50*price1)+(50*price2)+(100*price3)+((kwh-200)*price4)) + " VND";
+            }
+            else{
+                document.getElementById("result").textContent = 
+                "Tổng số tiền điện phải trả là: " + ((50*price1)+(50*price2)+(100*price3)+(100*price4)+((kwh-300)*price5)) + " VND";
+            }
+        }
+    </script>
+</body>
+</html>

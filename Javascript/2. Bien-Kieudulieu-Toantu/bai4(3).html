@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="bankinh" type="text" placeholder="Bán kính"/>
+    <button onclick="dientich()">Tính diện tích</button>
+    <p id="result"></p>
+    
+
+    <script>
+        const dientich = () => {
+        let bankinh = parseInt(document.getElementById("bankinh").value);
+        const pi = 3.14;
+        let tinhdientich = pi * (bankinh**2);
+        document.getElementById("result").textContent = "Diện tích hình tròn " + tinhdientich;
+    }
+    </script>
+</body>
+</html>

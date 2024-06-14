@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="userName" type="text" placeholder="Username"/>
+    <input id="password" type="text" placeholder="Password"/>
+    <button onclick="login()">Login</button>
+    <p id="result"></p>
+
+    <script>
+        const login = () => {
+            let userName = document.getElementById("userName").value;
+            if (userName == "Admin") {
+                    let password = document.getElementById("password").value;
+                    if (password == "TheMaster") {
+                        document.getElementById("result").textContent = "Welcome"
+                    }
+                    else if (password == "") {
+                        document.getElementById("result").textContent = "Canceled"
+                    }
+                    else {
+                         document.getElementById("result").textContent = "Wrong password"
+                    }
+            }
+            else if (userName == "") {
+                document.getElementById("result").textContent = "Canceled"
+            }
+            else {
+                document.getElementById("result").textContent = "I don't know you"
+            }
+        }
+    </script>
+</body>
+</html>

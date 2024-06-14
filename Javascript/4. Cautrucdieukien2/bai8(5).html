@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="diem20" type="text" placeholder="Điểm kiểm tra"/>
+    <input id="diem30" type="text" placeholder="Điểm thi giữa kì"/>
+    <input id="diem50" type="text" placeholder="Điểm thi cuối kì"/>
+    <button onclick="kiemtra()">Kiểm tra</button>
+    <p id="result"></p>
+    <script>
+        function kiemtra () {
+            let diem20 = parseInt(document.getElementById("diem20").value);
+            let diem30 = parseInt(document.getElementById("diem30").value);
+            let diem50 = parseInt(document.getElementById("diem50").value);
+            let tongdiem = ((diem20 * 2) + (diem30 * 3) + (diem50 * 5)) / 10;
+            if (tongdiem > 8) {
+                result = "HSG"
+            }
+            else {
+                result = "HSK"
+            }
+            document.getElementById("result").textContent ="Tổng điểm là " + tongdiem + " điểm: " +result;
+        }
+    </script>
+</body>
+</html>
